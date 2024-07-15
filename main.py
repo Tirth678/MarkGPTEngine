@@ -36,16 +36,20 @@ if __name__ == "__main__":
         if "open msuic" in query:
             musicPath = "your music path"
             os.system(f"opening {musicPath} sir...")
-
-        if "what is the time" in query:
+        elif "what is the time" in query:
             currTime = datetime.datetime.now().strftime("%H:%M %S")
             say(f" sir the time is {currTime}")
-
-        if "open factime".lower() in query.lower():
+        elif "open factime".lower() in query.lower():
             os.system(f"open /System/Applications/FaceTime.app")
-
-        if "open find my".lower() in query.lower():
+        elif "open find my".lower() in query.lower():
             os.system(f"open /System/Applications/FindMy.app")
+        elif "open notes".lower() in query.lower():
+            os.system(f"open /System/Applications/Notes.app")
+        elif "open whatsapp".lower() in query.lower():
+            os.system(f"open /System/Applications/WhatsApp.app")
+
+
+        
 
 
 
