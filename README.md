@@ -1,1 +1,1 @@
-This is a in-built system assistant that will help you to perform your normal daily task<br> in just minutes<br>
+This is a in-built system assistant that will help you to perform your normal daily task<br> in just minutes!<br> This is still on alpha stage a lot to configure on<br> thanks for reading <br> have a great day.
