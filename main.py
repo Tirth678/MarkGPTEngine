@@ -29,10 +29,13 @@ def takeCommand():
 #         timehere.write(query)
 #         timehere.close()
 #         os.startfile("alaram.py")
-
 query = "Your string to write to the file."
+
+# Open and write to the file
 with open("alaram.txt", "a") as timehere:
     timehere.write(query)
+
+# Execute the Python script
 subprocess.call(["python3", "alaram.py"])
 
 if __name__ == "__main__":
