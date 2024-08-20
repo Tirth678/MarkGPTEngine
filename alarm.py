@@ -1,9 +1,6 @@
 import speech_recognition as sr
 import os
 import datetime
-
-
-
 import speech_recognition as sr
 import os
 import datetime
@@ -30,13 +27,6 @@ def takeCommand():
     # extractedTime.close()
 
     # deletetime = open("Alarm.txt", "r+")
-
-
-
-
-
-
-
 def ring(time):
     timeset = str(time)
     timenow = timeset.replace("jarvish", "")
