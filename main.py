@@ -4,6 +4,8 @@ import os
 import webbrowser
 import openai
 import datetime
+import requests
+from bs4 import BeautifulSoup
 def say(text):
     os.system(f"say {text}")
 
@@ -20,7 +22,7 @@ def takeCommand():
             return query
         except Exception as e:
             return "Sorry I am unable to recognize your voice"
-        
+
 # def alaram(query):
 #         timhere = open("alaram.txt", "a")
 #         timehere.write(query)
@@ -56,9 +58,24 @@ if __name__ == "__main__":
             os.system(f"open /System/Applications/WhatsApp.app")
         elif "tell me about your yourslef".lower() in query.lower():
             say("I am currently in development stage but I can help you get your daily task done like never before, how can I help you today?")
-
-
-        
-
-
-
+        elif "temprature".lower() in query.lower():
+            search = "temprature in vadodara"
+            url = f"https://search.brave.com/search?q={search}"
+            r = requests.get(url)
+            data = BeautifulSoup(r.text, "htm.parser")
+            temp = data.find("div", class_ = "BNeawe").text
+            say(f"current{search} is {temp}")
+        elif "weather".lower() in query.lower():
+            search = "weather in vadodara"
+            url = f"https://search.brave.com/search?q={search}"
+            r = requests.get(url)
+            data = BeautifulSoup(r.text, "htm.parser")
+            temp = data.find("div", class_ = "BNeawe").text
+            say(f"current{search} is {temp}")
+        elif "the time".lower() in query.lower():
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")
+            say(f"Sir, the time is{strTime}")
+        elif "finally sleep".lower() in query.lower():
+            say("Logging out of the system sir")
+            exit()
+            
