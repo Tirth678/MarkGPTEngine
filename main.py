@@ -87,3 +87,5 @@ if __name__ == "__main__":
         elif "finally sleep".lower() in query.lower():
             say("Logging out of the system sir")
             exit()
+        elif "open vs code".lower() in query.lower():
+            os.system()
